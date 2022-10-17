@@ -2,7 +2,8 @@
 const Cors = require('cors')
 const allowlist = [
     "http://localhost:3000",
-    "http://localhost:3500"
+    "http://localhost:3500",
+    "Thunder Client (https://www.thunderclient.com) "
   ];
   
   const corsOptionDelegate = (req, callback) => {

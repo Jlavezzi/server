@@ -4,6 +4,8 @@ const passportLocalMongoose = require("passport-local-mongoose");
 // mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
+      username: String,
+      pwd: String,
   roles: [
      {
       type: mongoose.Schema.Types.ObjectId,
@@ -17,16 +19,7 @@ const userSchema = new mongoose.Schema({
      });
 
 
-// const userSchema = new mongoose.Schema({
-//   roles: [{
-//     type: String,
-//     required: false
-//   }],
-//   attributes: [{
-//     type: Object,
-//     required: false
-//   }]
-// });
+
 
 userSchema.plugin(passportLocalMongoose);
 // userSchema.plugin(findOrCreate);
